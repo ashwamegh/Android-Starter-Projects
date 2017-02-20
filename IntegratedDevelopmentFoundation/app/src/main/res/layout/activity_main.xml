@@ -67,7 +67,7 @@
     <LinearLayout
         android:id="@+id/visit_us"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_margin="8sp"
         android:background="@color/backgroundColor"
         android:orientation="horizontal"
@@ -80,7 +80,7 @@
             android:layout_weight="1"
             android:textColor="@color/baseColor"
             android:text="@string/click_here_to_visit_us"
-            android:textSize="24sp"/>
+            android:textSize="19sp"/>
 
         <ImageView
             android:id="@+id/visit_image"

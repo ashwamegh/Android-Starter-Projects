@@ -18,7 +18,7 @@ import android.widget.ViewFlipper;
 public class MainActivity extends AppCompatActivity {
         private ViewFlipper mViewFlipper;
         private GestureDetector mGestureDetector;
-        private TextView mLink;
+        private ImageView mLink;
 
         int[] resources = {
                 R.drawable.image,
@@ -52,13 +52,18 @@ public class MainActivity extends AppCompatActivity {
                 mViewFlipper.addView(imageView);
             }
 
-            mLink = (TextView) findViewById(R.id.visit_link);
+            mLink= (ImageView) findViewById(R.id.visit_image);
+            mLink.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent intent= new Intent();
+                    intent.setAction(Intent.ACTION_VIEW);
+                    intent.addCategory(Intent.CATEGORY_BROWSABLE);
+                    intent.setData(Uri.parse("http://idfngo.org/"));
+                    startActivity(intent);
+                }
+            });
 
-            if (mLink != null) {
-                mLink.setMovementMethod(LinkMovementMethod.getInstance());
-
-
-            }
 
 
 
