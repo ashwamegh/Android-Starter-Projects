@@ -10,7 +10,7 @@ import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int numberOfCoffees = 2;
+    private int numberOfCoffees = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +41,17 @@ public class MainActivity extends AppCompatActivity {
      * @param view
      */
     public void submitOrder(View view){
+        String priceMessage = "Total: ₹ "+numberOfCoffees*5;
+        priceMessage = priceMessage +"\nThank You!";
+        displayMessage(priceMessage);
 
-        display(numberOfCoffees);
-        displayPrice(numberOfCoffees * 5);
+//        display(numberOfCoffees);
+//        displayPrice(numberOfCoffees * 5);
+    }
+
+    private void displayMessage(String priceMessage) {
+        TextView priceMessage_TextView = (TextView) findViewById(R.id.price_text_view);
+        priceMessage_TextView.setText(priceMessage);
     }
 
     /**
