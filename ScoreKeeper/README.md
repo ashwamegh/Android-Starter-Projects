@@ -4,4 +4,4 @@
 
 ####Screenshot:
 
-![alt-tag](screenshot.png)
+![alt-tag](screenshot.png =300x533)
