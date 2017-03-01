@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Score Keeper</string>
+    <string name="country_prompt">Choose a country</string>
+    <string-array name="country_arrays">
+        <item>India</item>
+        <item>Australia</item>
+        <item>Pakistan</item>
+        <item>South Africa</item>
+        <item>Bangladesh</item>
+        <item>SriLanka</item>
+        <item>New Zealand</item>
+        <item>West Indies</item>
+    </string-array>
+
+    <string-array name="country_arrays_reverse">
+        <item>West Indies</item>
+        <item>New Zealand</item>
+        <item>SriLanka</item>
+        <item>Bangladesh</item>
+        <item>South Africa</item>
+        <item>Pakistan</item>
+        <item>Australia</item>
+        <item>India</item>
+    </string-array>
+
+</resources>
