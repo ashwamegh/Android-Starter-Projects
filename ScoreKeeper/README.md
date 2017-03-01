@@ -4,4 +4,4 @@
 
 ####Screenshot:
 
-![alt-tag](screenshot.png =300x533)
+![alt-tag](screenshot.png){:height="300px" width="533px"}
