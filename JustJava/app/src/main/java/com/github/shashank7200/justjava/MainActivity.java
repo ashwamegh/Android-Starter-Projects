@@ -4,8 +4,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
-import java.text.*;
-import java.util.Locale;
 
 
 public class MainActivity extends AppCompatActivity {
@@ -23,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
      */
     public void increment(View view){
         numberOfCoffees++;
-        display(numberOfCoffees);
+        displayQuantity(numberOfCoffees);
     }
 
     /**
@@ -33,42 +31,46 @@ public class MainActivity extends AppCompatActivity {
 
     public void decrement(View view){
         numberOfCoffees--;
-        display(numberOfCoffees);
+        displayQuantity(numberOfCoffees);
+    }
+
+    private int calculatePrice(){
+        return numberOfCoffees *5;
+    }
+    /**
+     * This method is called when ORDER button is pressed
+     * @param view, responding to Order Button
+     */
+    public void submitOrder(View view){
+        int orderPrice = calculatePrice();
+        String orderSummary = createOrderSummary(orderPrice);
+        displayMessage(orderSummary);
+
     }
 
     /**
-     * This method is called when ORDER button is pressed
-     * @param view
+     *
+     * @param orderPrice for the number of coffees ordered
+     * @return the Order Summary.
      */
-    public void submitOrder(View view){
-        String priceMessage = "Total: ₹ "+numberOfCoffees*5;
-        priceMessage = priceMessage +"\nThank You!";
-        displayMessage(priceMessage);
-
-//        display(numberOfCoffees);
-//        displayPrice(numberOfCoffees * 5);
+    private String createOrderSummary(int orderPrice) {
+        String orderSummary  = "Name: Shashank Shekhar \nQuantity: "+numberOfCoffees+"\nTotal: ₹ "+orderPrice+"\nThank You!";
+        return orderSummary;
     }
 
     private void displayMessage(String priceMessage) {
-        TextView priceMessage_TextView = (TextView) findViewById(R.id.price_text_view);
-        priceMessage_TextView.setText(priceMessage);
+        TextView orderSummaryTextView = (TextView) findViewById(R.id.order_summary_text_view);
+        orderSummaryTextView.setText(priceMessage);
     }
 
     /**
      * This method updates the Quantity of Coffees being Ordered.
      * @param number
      */
-    private void display(int number) {
+    private void displayQuantity(int number) {
 
         TextView quantityTextView = (TextView) findViewById(R.id.quantity_text_view);
         quantityTextView.setText(""+ number);
     }
 
-    /**
-     * This method displays the price of total coffee ordered.
-     */
-    private void displayPrice(int number){
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
-        priceTextView.setText(NumberFormat.getCurrencyInstance(new Locale("en","in")).format(number));
-    }
 }
