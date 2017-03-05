@@ -2,7 +2,9 @@ package com.github.shashank7200.justjava;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.CheckBox;
 import android.widget.TextView;
 
 
@@ -43,7 +45,13 @@ public class MainActivity extends AppCompatActivity {
      */
     public void submitOrder(View view){
         int orderPrice = calculatePrice();
-        String orderSummary = createOrderSummary(orderPrice);
+        CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream_check_box);
+        CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_check_box);
+
+        boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
+        boolean hasChocolate = chocolateCheckBox.isChecked();
+
+        String orderSummary = createOrderSummary(orderPrice,hasWhippedCream, hasChocolate);
         displayMessage(orderSummary);
 
     }
@@ -51,10 +59,17 @@ public class MainActivity extends AppCompatActivity {
     /**
      *
      * @param orderPrice for the number of coffees ordered
+     * @param hasWhippedCream specifies whether whipped Cream is added or not.
+     * @param hasChocolate specifies whether Chocolate is selected or not.
      * @return the Order Summary.
      */
-    private String createOrderSummary(int orderPrice) {
-        String orderSummary  = "Name: Shashank Shekhar \nQuantity: "+numberOfCoffees+"\nTotal: ₹ "+orderPrice+"\nThank You!";
+    private String createOrderSummary(int orderPrice, boolean hasWhippedCream , boolean hasChocolate) {
+
+
+        String orderSummary  = "Name: Shashank Shekhar \nAdd whipped cream? "+hasWhippedCream+
+                "\nAdd chocolate? "+hasChocolate+
+                "\nQuantity: "+numberOfCoffees+
+                "\nTotal: ₹ "+orderPrice+"\nThank You!";
         return orderSummary;
     }
 
