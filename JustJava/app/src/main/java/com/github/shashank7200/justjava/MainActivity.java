@@ -5,6 +5,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.TextView;
 
 
@@ -44,14 +45,18 @@ public class MainActivity extends AppCompatActivity {
      * @param view, responding to Order Button
      */
     public void submitOrder(View view){
+        EditText name = (EditText) findViewById(R.id.name_field);
+        String nameString = name.getText().toString();
+
         int orderPrice = calculatePrice();
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream_check_box);
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_check_box);
 
+
         boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
         boolean hasChocolate = chocolateCheckBox.isChecked();
 
-        String orderSummary = createOrderSummary(orderPrice,hasWhippedCream, hasChocolate);
+        String orderSummary = createOrderSummary(nameString, orderPrice ,hasWhippedCream, hasChocolate);
         displayMessage(orderSummary);
 
     }
@@ -63,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
      * @param hasChocolate specifies whether Chocolate is selected or not.
      * @return the Order Summary.
      */
-    private String createOrderSummary(int orderPrice, boolean hasWhippedCream , boolean hasChocolate) {
+    private String createOrderSummary(String name, int orderPrice, boolean hasWhippedCream , boolean hasChocolate) {
 
 
-        String orderSummary  = "Name: Shashank Shekhar \nAdd whipped cream? "+hasWhippedCream+
+        String orderSummary  = "Name: "+name+"\nAdd whipped cream? "+hasWhippedCream+
                 "\nAdd chocolate? "+hasChocolate+
                 "\nQuantity: "+numberOfCoffees+
                 "\nTotal: ₹ "+orderPrice+"\nThank You!";
