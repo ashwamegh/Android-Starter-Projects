@@ -1,5 +1,5 @@
 # Android-Starter-Projects
-This repo considers the projects which are developed during Studying Android Functionalities.
+This repo contains the designated Projects which are developed to serve it as the final project for the lessons.
 
 
 ## License & Copyright:
