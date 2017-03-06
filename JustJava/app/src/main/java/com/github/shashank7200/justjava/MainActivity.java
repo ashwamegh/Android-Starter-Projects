@@ -11,6 +11,7 @@ import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
 
+
     private int numberOfCoffees = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,8 +38,24 @@ public class MainActivity extends AppCompatActivity {
         displayQuantity(numberOfCoffees);
     }
 
-    private int calculatePrice(){
-        return numberOfCoffees *5;
+    private int calculatePrice(boolean addWhippedCream, boolean addChocolate){
+        int basePrice = numberOfCoffees * 5;
+
+        if (addWhippedCream){
+            if (addChocolate){
+                basePrice = basePrice + 3;
+            }
+            else{
+                basePrice = basePrice +1;
+            }
+        }
+        else {
+            if (addChocolate){
+                basePrice = basePrice + 2;
+            }
+        }
+
+        return  basePrice;
     }
     /**
      * This method is called when ORDER button is pressed
@@ -48,13 +65,14 @@ public class MainActivity extends AppCompatActivity {
         EditText name = (EditText) findViewById(R.id.name_field);
         String nameString = name.getText().toString();
 
-        int orderPrice = calculatePrice();
         CheckBox whippedCreamCheckBox = (CheckBox) findViewById(R.id.whipped_cream_check_box);
         CheckBox chocolateCheckBox = (CheckBox) findViewById(R.id.chocolate_check_box);
 
-
         boolean hasWhippedCream = whippedCreamCheckBox.isChecked();
         boolean hasChocolate = chocolateCheckBox.isChecked();
+
+        int orderPrice = calculatePrice(hasWhippedCream, hasChocolate);
+
 
         String orderSummary = createOrderSummary(nameString, orderPrice ,hasWhippedCream, hasChocolate);
         displayMessage(orderSummary);
