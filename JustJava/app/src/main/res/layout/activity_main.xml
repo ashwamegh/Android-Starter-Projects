@@ -15,7 +15,7 @@
     tools:context="com.github.shashank7200.justjava.MainActivity">
 
     <EditText
-        android:hint="Name"
+        android:hint="@string/name_hint"
         android:inputType="textCapWords"
         android:imeOptions="actionDone"
         android:layout_width="match_parent"
@@ -26,14 +26,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="TOPPINGS"
+        android:text="@string/toppings"
         android:textSize="16sp"/>
 
     <CheckBox
         android:id="@+id/whipped_cream_check_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Whipped cream"
+        android:text="@string/whipped_cream"
         android:paddingLeft="24dp"
         android:textSize="16sp"/>
 
@@ -41,7 +41,7 @@
         android:id="@+id/chocolate_check_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Chocolate"
+        android:text="@string/chocolate"
         android:paddingLeft="24dp"
         android:textSize="16sp"/>
 
@@ -49,7 +49,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
-        android:text="QUANTITY"
+        android:text="@string/quantity"
         android:layout_marginTop="16dp"
         android:textSize="16sp"/>
 
@@ -86,35 +86,23 @@
 
     </LinearLayout>
 
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@android:color/holo_blue_dark"
         android:layout_marginBottom="16dp"
-        android:text="Order Summary"
-        android:textAllCaps="true"
-        android:textSize="16sp"/>
+        android:layout_marginRight="8dp"
+        android:layout_marginLeft="8dp"/>
 
-    <TextView
-        android:id="@+id/order_summary_text_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="Total: ₹ 5"
-        android:textColor="#000"
-        android:textSize="16sp"/>
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:onClick="submitOrder"
-        android:text="Order"
+        android:text="@string/order"
         android:textSize="16sp"/>
 
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:background="@android:color/holo_blue_dark"/>
+
 
 </LinearLayout>
 </ScrollView>
