@@ -1,3 +1,23 @@
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
     <string name="app_name">Just Java</string>
+    <string name="name_hint">Name</string>
+
+    <!--Hint :  Header Text for the Toppings Limit [Char == 20]-->
+    <string name="toppings">TOPPINGS</string>
+    <string name="whipped_cream">Whipped cream</string>
+    <string name="chocolate">Chocolate</string>
+    <string name="quantity">QUANTITY</string>
+    <string name="order">Order</string>
+    <string name="increment_toast_message">You can\'t have more than 100 coffees!</string>
+    <string name="decrement_toast_message">You can\'t have less than 1 coffee!</string>
+    <string name="mail_subject">Just Java order for </string>
+
+    <!--Skips localization for the content provided in xliff-->
+    <string name="order_summary_name">Name: <xliff:g id ="name" example="Amy">%s</xliff:g></string>
+    <string name="whipped_cream_status">Add whipped cream? <xliff id="whipped_cream_value" example="true">%b</xliff> </string>
+    <string name="chocolate_status">Add chocolate? <xliff id="chocolate_value" example="true">%b</xliff></string>
+    <string name="order_quantity">Quantity: <xliff id="quantity" example="1">%d</xliff></string>
+    <string name="total_price">Total: ₹ <xliff id="total" example="24">%d</xliff></string>
+    <string name="thank_you">Thank You!</string>
+
 </resources>
