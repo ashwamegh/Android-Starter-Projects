@@ -23,11 +23,8 @@
         android:layout_marginBottom="16dp"
         android:id="@+id/name_field"/>
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
-        android:text="@string/toppings"
-        android:textSize="16sp"/>
+        style="@style/HeaderTextStyle"
+        android:text="@string/toppings"/>
 
     <CheckBox
         android:id="@+id/whipped_cream_check_box"
@@ -46,12 +43,9 @@
         android:textSize="16sp"/>
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        style="@style/HeaderTextStyle"
         android:text="@string/quantity"
-        android:layout_marginTop="16dp"
-        android:textSize="16sp"/>
+        android:layout_marginTop="16dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
