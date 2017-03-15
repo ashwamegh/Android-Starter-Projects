@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.github.shashank7200.quizster.MainActivity">
+
+    <TextView
+        style="@style/questionStyle"
+        android:id="@+id/question_text"
+        android:text="Dummy text"/>
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/answer1"
+            style="@style/answerStyle"
+            android:text="dunmmy teext"/>
+
+        <RadioButton
+            android:id="@+id/answer2"
+            style="@style/answerStyle"
+            android:text="dunmmy teext"/>
+
+        <RadioButton
+            android:id="@+id/answer3"
+            style="@style/answerStyle"
+            android:text="dunmmy teext"/>
+
+        <RadioButton
+            android:id="@+id/answer4"
+            style="@style/answerStyle"
+            android:text="dunmmy teext"/>
+
+    </RadioGroup>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_marginTop="24dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/reset"/>
+        <Button
+            style="@style/buttonStyle"
+            android:onClick="submitScore"
+            android:text="@string/submit"/>
+
+        <Button
+            style="@style/buttonStyle"
+            android:text="@string/next"
+            android:paddingLeft="16dp"/>
+    </LinearLayout>
+
+</LinearLayout>
+</ScrollView>

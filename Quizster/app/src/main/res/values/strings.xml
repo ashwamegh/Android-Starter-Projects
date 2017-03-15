@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">Quizster</string>
+    <string name="reset">Reset</string>
+    <string name="submit">submit</string>
+    <string name="next">next</string>
+</resources>
