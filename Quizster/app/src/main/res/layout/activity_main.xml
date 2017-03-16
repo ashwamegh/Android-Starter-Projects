@@ -1,66 +1,82 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-<LinearLayout
-
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context="com.github.shashank7200.quizster.MainActivity">
+    android:background="#0E1840">
 
-    <TextView
-        style="@style/questionStyle"
-        android:id="@+id/question_text"
-        android:text="Dummy text"/>
-
-    <RadioGroup
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:id="@+id/answer1"
-            style="@style/answerStyle"
-            android:text="dunmmy teext"/>
+        android:layout_height="match_parent">
 
-        <RadioButton
-            android:id="@+id/answer2"
-            style="@style/answerStyle"
-            android:text="dunmmy teext"/>
+        <LinearLayout
 
-        <RadioButton
-            android:id="@+id/answer3"
-            style="@style/answerStyle"
-            android:text="dunmmy teext"/>
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            tools:context="com.github.shashank7200.quizster.MainActivity">
 
-        <RadioButton
-            android:id="@+id/answer4"
-            style="@style/answerStyle"
-            android:text="dunmmy teext"/>
+            <TextView
+                android:id="@+id/question"
+                style="@style/questionStyle"
+                android:text="Dummy text"/>
 
-    </RadioGroup>
+            <RadioGroup
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/groupid">
 
-    <LinearLayout
-        android:orientation="horizontal"
-        android:layout_marginTop="24dp"
+                <RadioButton
+                    android:id="@+id/answera"
+                    style="@style/answerStyle"
+                    android:text="dunmmy teext"/>
+
+                <RadioButton
+                    android:id="@+id/answerb"
+                    style="@style/answerStyle"
+                    android:text="dunmmy teext"/>
+
+                <RadioButton
+                    android:id="@+id/answerc"
+                    style="@style/answerStyle"
+                    android:text="dunmmy teext"/>
+
+                <RadioButton
+                    android:id="@+id/answerd"
+                    style="@style/answerStyle"
+                    android:text="dunmmy teext"/>
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="50dp">
+
+                <Button
+                    style="@style/buttonStylea"
+                    android:text="@string/reset"
+                    android:onClick="resetQuestion"/>
+                <Button
+                    style="@style/buttonStyleb"
+                    android:text="@string/next"
+                    android:onClick="nextQuestion"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            style="@style/buttonStyle"
-            android:text="@string/reset"/>
-        <Button
-            style="@style/buttonStyle"
-            android:onClick="submitScore"
-            android:text="@string/submit"/>
-
-        <Button
-            style="@style/buttonStyle"
-            android:text="@string/next"
-            android:paddingLeft="16dp"/>
-    </LinearLayout>
-
-</LinearLayout>
-</ScrollView>
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ff8f00"
+        android:onClick="submitScore"
+        android:text="@string/submit"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="#F8F8F8"/>
+</RelativeLayout>
