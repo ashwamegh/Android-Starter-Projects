@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -7,9 +7,6 @@
     android:layout_height="match_parent"
     android:background="#0E1840">
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
 
         <LinearLayout
 
@@ -23,10 +20,6 @@
                 style="@style/questionStyle"
                 android:text="Dummy text"/>
 
-            <RadioGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:id="@+id/groupid">
 
                 <RadioButton
                     android:id="@+id/answera"
@@ -48,35 +41,7 @@
                     style="@style/answerStyle"
                     android:text="dunmmy teext"/>
 
-            </RadioGroup>
 
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginBottom="50dp">
-
-                <Button
-                    style="@style/buttonStylea"
-                    android:text="@string/reset"
-                    android:onClick="resetQuestion"/>
-                <Button
-                    style="@style/buttonStyleb"
-                    android:text="@string/next"
-                    android:onClick="nextQuestion"/>
-
-            </LinearLayout>
         </LinearLayout>
-    </ScrollView>
 
-    <Button
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:background="#ff8f00"
-        android:onClick="submitScore"
-        android:text="@string/submit"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="#F8F8F8"/>
-</RelativeLayout>
+</ScrollView>
