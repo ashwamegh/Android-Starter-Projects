@@ -25,16 +25,23 @@ public class MainActivity extends AppCompatActivity {
 
     public void fade(View view) {
         ImageView bart = (ImageView) findViewById(R.id.bart);
-         ImageView homer = (ImageView) findViewById(R.id.homer);
+//         ImageView homer = (ImageView) findViewById(R.id.homer);
 
-        bart.animate().alpha(0f).setDuration(2000);
-        homer.animate().alpha(1f).setDuration(2000);
+        bart.animate().translationYBy(1100f).translationXBy(1100f).rotationBy(3600f).setDuration(2000);
+
+//        homer.animate().alpha(1f).setDuration(2000);
     }
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        ImageView bart = (ImageView) findViewById(R.id.bart);
+
+        bart.animate().translationXBy(-1100f).translationYBy(-1100f);
+
+
         setContentView(R.layout.activity_main);
         // ATTENTION: This was auto-generated to implement the App Indexing API.
         // See https://g.co/AppIndexing/AndroidStudio for more information.
