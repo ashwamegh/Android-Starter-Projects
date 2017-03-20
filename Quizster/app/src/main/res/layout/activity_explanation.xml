@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context= ".ExplanationActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_marginBottom="32dp"
+        android:layout_height="match_parent">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/questionTitle"
+                android:text="@string/answer_1_c"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation_1"/>
+
+            <View
+                style="@style/viewStyle"></View>
+
+            <TextView
+                style="@style/questionTitle"
+                android:text="@string/answer_3_d"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation_2"/>
+
+            <View
+                style="@style/viewStyle"></View>
+
+            <TextView
+                style="@style/questionTitle"
+                android:text="@string/answer_8_c"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation_3"/>
+
+            <View
+                style="@style/viewStyle"></View>
+
+            <TextView
+                style="@style/questionTitle"
+                android:text="@string/answer_9_b"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation_4"/>
+
+            <View
+                style="@style/viewStyle"></View>
+
+            <TextView
+                style="@style/questionTitle"
+                android:text="@string/answer_10_all"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation"/>
+
+            <TextView
+                style="@style/explanationStyle"
+                android:text="@string/explanation_5"/>
+
+            <View
+                style="@style/viewStyle"></View>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#ecf0f1"
+        android:onClick="goBackToMain"
+        android:text="@string/go_back"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="#039AED"/>
+
+</RelativeLayout>

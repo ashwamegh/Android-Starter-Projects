@@ -1,17 +1,39 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-              android:orientation="vertical"
-              android:layout_width="match_parent"
-              android:background="#1abc9c"
-              android:layout_height="match_parent">
 
-    <TextView
-        android:id="@+id/score_display"
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FF5722"
+    tools:context=".SubmitActivity">
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:gravity="center_vertical|center_horizontal"
-        android:textSize="56dp"
-        android:fontFamily="roboto-bold"
-        android:textColor="#fff"
-        android:text="Score: 0"/>
-</LinearLayout>
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/score_display"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fontFamily="roboto-bold"
+            android:gravity="center_vertical|center_horizontal"
+            android:text="Score: 0"
+            android:textColor="#fff"
+            android:textSize="40dp"/>
+
+
+    </LinearLayout>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#212121"
+        android:onClick="showExplanation"
+        android:text="@string/show_explanation"
+        android:textColor="#f44336"
+        android:textSize="18sp"
+        android:textStyle="bold"/>
+</RelativeLayout>
