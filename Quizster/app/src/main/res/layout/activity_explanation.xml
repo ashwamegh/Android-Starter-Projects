@@ -5,12 +5,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context= ".ExplanationActivity">
+    tools:context=".ExplanationActivity">
 
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_marginBottom="32dp"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginBottom="32dp">
 
 
         <LinearLayout
@@ -47,6 +47,7 @@
             <TextView
                 style="@style/correctAnswerStyle"
                 android:text="@string/answer_2_a"/>
+
             <View
                 style="@style/viewStyle"></View>
 
@@ -79,6 +80,7 @@
             <TextView
                 style="@style/correctAnswerStyle"
                 android:text="@string/answer_4_a_c"/>
+
             <View
                 style="@style/viewStyle"></View>
 
@@ -91,6 +93,7 @@
             <TextView
                 style="@style/correctAnswerStyle"
                 android:text="@string/answer_5_b"/>
+
             <View
                 style="@style/viewStyle"></View>
 
@@ -103,6 +106,7 @@
             <TextView
                 style="@style/correctAnswerStyle"
                 android:text="@string/answer_6_c"/>
+
             <View
                 style="@style/viewStyle"></View>
 
@@ -115,6 +119,7 @@
             <TextView
                 style="@style/correctAnswerStyle"
                 android:text="@string/answer_7_c"/>
+
             <View
                 style="@style/viewStyle"></View>
 
@@ -192,8 +197,8 @@
         android:background="#ecf0f1"
         android:onClick="goBackToMain"
         android:text="@string/go_back"
+        android:textColor="#039AED"
         android:textSize="18sp"
-        android:textStyle="bold"
-        android:textColor="#039AED"/>
+        android:textStyle="bold"/>
 
 </RelativeLayout>

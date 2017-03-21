@@ -17,20 +17,22 @@ public class SubmitActivity extends AppCompatActivity {
         setContentView(R.layout.activity_submit);
         Intent i = getIntent();
 
-        int finalScore = i.getIntExtra("Score",0);
+        int finalScore = i.getIntExtra("Score", 0);
         String userName = i.getStringExtra("Name");
         TextView scoreDisplay = (TextView) findViewById(R.id.score_display);
 
 
-        if (userName.trim().isEmpty() || userName.trim() == null){
-            scoreDisplay.setText("Your Score: "+finalScore);
-        }
-        else {
+        if (userName.trim().isEmpty() || userName.trim() == null) {
+            scoreDisplay.setText("Your Score: " + finalScore);
+        } else {
             scoreDisplay.setText(userName + "\'s \nScore: " + finalScore);
         }
     }
 
-    public void showExplanation(View view){
+    /**
+     * @param view Method to receive intents & extras from MainActivity and passes it to ExplanationActivity.
+     */
+    public void showExplanation(View view) {
         Intent i = getIntent();
         String answer1 = i.getStringExtra("answer1");
         String answer2 = i.getStringExtra("answer2");
@@ -44,16 +46,16 @@ public class SubmitActivity extends AppCompatActivity {
         String answer10 = i.getStringExtra("answer10");
 
         Intent intent = new Intent(SubmitActivity.this, ExplanationActivity.class);
-        intent.putExtra("answer1",answer1);
-        intent.putExtra("answer2",answer2);
-        intent.putExtra("answer3",answer3);
-        intent.putExtra("answer4",answer4);
-        intent.putExtra("answer5",answer5);
-        intent.putExtra("answer6",answer6);
-        intent.putExtra("answer7",answer7);
-        intent.putExtra("answer8",answer8);
-        intent.putExtra("answer9",answer9);
-        intent.putExtra("answer10",answer10);
+        intent.putExtra("answer1", answer1);
+        intent.putExtra("answer2", answer2);
+        intent.putExtra("answer3", answer3);
+        intent.putExtra("answer4", answer4);
+        intent.putExtra("answer5", answer5);
+        intent.putExtra("answer6", answer6);
+        intent.putExtra("answer7", answer7);
+        intent.putExtra("answer8", answer8);
+        intent.putExtra("answer9", answer9);
+        intent.putExtra("answer10", answer10);
 
         startActivity(intent);
     }

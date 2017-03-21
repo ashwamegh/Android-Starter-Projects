@@ -18,6 +18,9 @@ public class ExplanationActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_explanation);
 
+        /**
+         * Intent & answer Extras received from SubmitActivity
+         */
         Intent i = getIntent();
         String answer1 = i.getStringExtra("answer1");
         String answer2 = i.getStringExtra("answer2");
@@ -36,39 +39,42 @@ public class ExplanationActivity extends AppCompatActivity {
          */
 
         TextView userAnswer1 = (TextView) findViewById(R.id.useranswer1);
-        userAnswer1.setText("Your Answer 1: "+answer1);
+        userAnswer1.setText("Your Answer 1: " + answer1);
 
         TextView userAnswer2 = (TextView) findViewById(R.id.useranswer2);
-        userAnswer2.setText("Your Answer 2: "+answer2);
+        userAnswer2.setText("Your Answer 2: " + answer2);
 
         TextView userAnswer3 = (TextView) findViewById(R.id.useranswer3);
-        userAnswer3.setText("Your Answer 3: "+answer3);
+        userAnswer3.setText("Your Answer 3: " + answer3);
 
         TextView userAnswer4 = (TextView) findViewById(R.id.useranswer4);
-        userAnswer4.setText("Your Answer 4: "+answer4);
+        userAnswer4.setText("Your Answer 4: " + answer4);
 
         TextView userAnswer5 = (TextView) findViewById(R.id.useranswer5);
-        userAnswer5.setText("Your Answer 5: "+answer5);
+        userAnswer5.setText("Your Answer 5: " + answer5);
 
         TextView userAnswer6 = (TextView) findViewById(R.id.useranswer6);
-        userAnswer6.setText("Your Answer 6: "+answer6);
+        userAnswer6.setText("Your Answer 6: " + answer6);
 
         TextView userAnswer7 = (TextView) findViewById(R.id.useranswer7);
-        userAnswer7.setText("Your Answer 7: "+answer7);
+        userAnswer7.setText("Your Answer 7: " + answer7);
 
         TextView userAnswer8 = (TextView) findViewById(R.id.useranswer8);
-        userAnswer8.setText("Your Answer 8: "+answer8);
+        userAnswer8.setText("Your Answer 8: " + answer8);
 
         TextView userAnswer9 = (TextView) findViewById(R.id.useranswer9);
-        userAnswer9.setText("Your Answer 9: "+answer9);
+        userAnswer9.setText("Your Answer 9: " + answer9);
 
         TextView userAnswer10 = (TextView) findViewById(R.id.useranswer10);
-        userAnswer10.setText("Your Answer 10: "+answer10);
+        userAnswer10.setText("Your Answer 10: " + answer10);
 
-        Log.d("Called Explanation","Explanation activity ended");
+        Log.d("Called Explanation", "Explanation activity ended");
     }
 
-    public void goBackToMain(View view){
+    /**
+     * @param view Method to redirect user back to Main User Interface.
+     */
+    public void goBackToMain(View view) {
         Intent i = new Intent(ExplanationActivity.this, MainActivity.class);
 
         startActivity(i);
