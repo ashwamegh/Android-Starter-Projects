@@ -60,11 +60,11 @@
     <string name="answer_10c">Broadcast Receiver</string>
     <string name="answer_10d">Content provider</string>
     <string name="enter_your_name">Enter your name</string>
-    <string name="answer_1_c">Answer 1: C</string>
-    <string name="answer_3_d">Answer 3: D</string>
-    <string name="answer_8_c">Answer 8: C</string>
-    <string name="answer_9_b">Answer 9: B</string>
-    <string name="answer_10_all">Answer 10: A,B,C &amp; D </string>
+    <string name="answer_1_c">Correct Answer 1: C</string>
+    <string name="answer_3_d">Correct Answer 3: D</string>
+    <string name="answer_8_c">Correct Answer 8: C</string>
+    <string name="answer_9_b">Correct Answer 9: B</string>
+    <string name="answer_10_all">Correct Answer 10: A,B,C &amp; D </string>
     <string name="explanation">Explanation:</string>
     <string name="explanation_1">Pending Intent is fired or triggered at a future point of time.</string>
     <string name="explanation_2">AsyncTask needs doInBackground() and remaining methods are optional. As a developer we should need to implement all methods which are given above.</string>
@@ -73,4 +73,9 @@
     <string name="explanation_5">The main components in android are Activity, services, Broadcast Receiver and content providers.</string>
     <string name="go_back">Go back</string>
     <string name="show_explanation">Show Explanation</string>
+    <string name="answer_2_a">Correct Answer 2: A</string>
+    <string name="answer_4_a_c">Correct Answer 4: A,C</string>
+    <string name="answer_7_c">Correct Answer 7: C</string>
+    <string name="answer_6_c">Correct Answer 6: C</string>
+    <string name="answer_5_b">Correct Answer 5: B</string>
 </resources>
