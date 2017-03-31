@@ -16,13 +16,25 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".NumbersActivity">
+
+        <activity
+            android:name=".NumbersActivity"
+            android:label="@string/numbers_activity">
         </activity>
-        <activity android:name=".FamilyActivity">
+
+        <activity
+            android:name=".FamilyActivity"
+            android:label="@string/family_activity">
         </activity>
-        <activity android:name=".ColorsActivity">
+
+        <activity
+            android:name=".ColorsActivity"
+            android:label="@string/colors_activivty">
         </activity>
-        <activity android:name=".PhrasesActivity">
+
+        <activity
+            android:name=".PhrasesActivity"
+            android:label="@string/phrases_activity">
         </activity>
     </application>
 
